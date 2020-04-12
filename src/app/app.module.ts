@@ -4,6 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +30,9 @@ import { BlogService } from './services';
     BrowserAnimationsModule,
     FlexLayoutModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    ScrollingModule,
+    NgScrollbarModule
   ],
   providers: [
     BlogService

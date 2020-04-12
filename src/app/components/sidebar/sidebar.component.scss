@@ -1,7 +1,13 @@
 .sidebar {
-    border: 2px solid darkgrey;
-}
+  //border: 2px solid darkgrey;
+  padding-right: 10px; 
 
-#profile-pic {
+  #profile-pic {
     border-radius: 50%;
+  }
+
+  .sidebar-bio {
+      text-align: justify;
+      text-justify: inter-word
+  }
 }

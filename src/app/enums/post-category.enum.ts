@@ -1,7 +1,7 @@
 export enum PostCategory {
-    Games,
-    Films,
-    Comics,
-    Personal,
-    Code
+    Games = 'Games',
+    Films = 'Films',
+    Comics = 'Comics',
+    Personal = 'Personal',
+    Code = 'Code'
 }

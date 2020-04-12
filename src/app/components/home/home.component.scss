@@ -1,3 +1,29 @@
 .home {
-    border: 2px solid black;
+  .blog-post {
+    border: 1px black solid;
+    margin-bottom: 10px;
+    margin-right: 20px;
+
+    .image-container {
+      margin-right: 10px;
+
+      .post-image {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  ng-scrollbar.virtual-scroll {
+    --scrollbar-size: 8px;
+    --scrollbar-thumb-color: gray;
+    --scrollbar-hover-size: 12px;
+    --scrollbar-track-color: rgba(0, 0, 0, 0.05);
+    --scrollbar-border-radius: 10px;
+
+    max-height: 99vh;
+    overflow: hidden;
+  }
 }

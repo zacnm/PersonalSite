@@ -1,17 +1,24 @@
 <div class="home">
-  <mat-card *ngFor="let post of posts">
-    <mat-card-header>
-      <mat-card-title>{{post.title}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div fxLayout="row" style="width: 100%">
-        <div fxFlex="33">
-          <img [src]="post.imageUrl" style="max-width: 100%; height: auto;">
-        </div>
-        <div fxFlex="66">
-          <p>{{post.body}}</p>
-        </div>
+  <ng-scrollbar class="virtual-scroll" thumbClass="white-scrollbars">
+    <cdk-virtual-scroll-viewport scrollViewport itemSize="1">
+      <div *cdkVirtualFor="let post of posts">
+        <mat-card class="blog-post">
+          <mat-card-header class="post-header">
+            <mat-card-title>{{ post.title }}</mat-card-title>
+            <mat-card-subtitle>{{ post.category }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div fxLayout="row" style="width: 100%;">
+              <div class="image-container" fxFlex="33">
+                <img class="post-image" [src]="post.imageUrl" />
+              </div>
+              <div fxFlex="66">
+                <p>{{ post.body }}</p>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
       </div>
-    </mat-card-content>
-  </mat-card>
+    </cdk-virtual-scroll-viewport>
+  </ng-scrollbar>
 </div>
